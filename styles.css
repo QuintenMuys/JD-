@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(190, 30, 30);
+    color: white;
+}
+
+.navbar {
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1000;
+    background: linear-gradient(to right, black, yellow, red);   
+    right: 0;
+    position: absolute;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.logo img {
+    height: 90px;
+    padding-left: 20px;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+#about, #projects, #contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    padding-top: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay img {
+    width: 300px; /* Pas dit aan naar wens */
+    opacity: 80%;
+}
+
+.overlay span {
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+.socials img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+/* Hamburger-menu voor mobiel */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: white;
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+/* Media query voor mobiel */
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(to right, black, yellow, red);
+    }
+
+    .navbar ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links{
+        background-color:  rgb(34, 37, 49);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+}
+
+
+
